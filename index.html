@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header style="margin-bottom: var(--space-lg); display: flex; justify-content: space-between; align-items: center;">
+    <h1>Dashboard</h1>
+    <button onclick="toggleTheme()" style="padding: 8px 16px; border-radius: var(--radius-sm); border: none; cursor: pointer; background: var(--primary-color); color: #fff;">Toggle Theme</button>
+  </header>
+
+  <main class="dashboard-grid">
+    <div class="glass-card">
+      <h3>Card 1</h3>
+      <p style="color: var(--text-muted); margin-top: var(--space-xs);">Stat info or metrics here.</p>
+    </div>
+    <div class="glass-card">
+      <h3>Card 2</h3>
+      <p style="color: var(--text-muted); margin-top: var(--space-xs);">Stat info or metrics here.</p>
+    </div>
+    <div class="glass-card">
+      <h3>Card 3</h3>
+      <p style="color: var(--text-muted); margin-top: var(--space-xs);">Stat info or metrics here.</p>
+    </div>
+    <div class="glass-card">
+      <h3>Card 4</h3>
+      <p style="color: var(--text-muted); margin-top: var(--space-xs);">Stat info or metrics here.</p>
+    </div>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
